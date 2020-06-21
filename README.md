@@ -47,7 +47,7 @@ someinternalhost_IP = 10.130.0.3
 
 ## ДЗ 6 урок
 
-testapp_IP = 84.201.128.206
+testapp_IP = 84.201.175.91
 testapp_port = 9292
 
 #### Самостоятельная работа:
