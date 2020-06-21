@@ -52,7 +52,9 @@ testapp_port = 9292
 
 #### Самостоятельная работа:
 install_ruby.sh
+
 install_mongodb.sh
+
 deploy.sh
 
 #### Дополнительное задание:
@@ -64,4 +66,3 @@ yc compute instance create \
   --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
   --metadata serial-port-enable=1 \
   --metadata-from-file user-data=startup_script
-  
