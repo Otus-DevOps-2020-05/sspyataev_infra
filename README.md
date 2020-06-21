@@ -44,3 +44,24 @@ ssh someinternalhost
 
 bastion_IP = 130.193.49.196
 someinternalhost_IP = 10.130.0.3
+
+## ДЗ 6 урок
+
+testapp_IP = 130.193.39.31
+testapp_port = 9292
+
+#### Самостоятельная работа:
+install_ruby.sh
+install_mongodb.sh
+deploy.sh
+
+#### Дополнительное задание:
+yc compute instance create \
+  --name reddit-app \
+  --hostname reddit-app \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
+  --metadata serial-port-enable=1 \
+  --metadata-from-file user-data=startup_script
+  
