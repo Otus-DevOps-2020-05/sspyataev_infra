@@ -66,3 +66,11 @@ yc compute instance create \
   --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
   --metadata serial-port-enable=1 \
   --metadata-from-file user-data=startup_script
+
+## ДЗ 7 урок
+Было сделано:
+* Изучена документация и работа packer
+* Написан ubuntu16.json для packer для создания образа ВМ.
+* Написан variables.json, в который вынесена часть параметров из ubuntu16.json. При создании образа параметризированные значения считываются из файла.
+* Написан immutable.json, который дополняет ubuntu16.json. В результате packer создаёт образ ВМ, после запуска которого приложение сразу доступно на http://<publicIp>:9292
+* Написан скрипт create-reddit-vm.sh, который автоматизирует процесс создания ВМ с уже запущенным приложением reddit. Достаточно выполнить config-scripts/create-reddit-vm.sh и результат проверить на http://<publicIp>:9292
