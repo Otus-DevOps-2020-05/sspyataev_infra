@@ -32,13 +32,4 @@ resource "yandex_compute_instance" "app" {
     agent       = false
     private_key = file(var.connection_private_key_path)
   }
-
-  provisioner "file" {
-    source      = "files/puma.service"
-    destination = "/tmp/puma.service"
-  }
-
-  provisioner "remote-exec" {
-    script = "files/deploy.sh"
-  }
 }
