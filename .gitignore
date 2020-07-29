@@ -6,3 +6,4 @@ packer/variables.json
 .terraform/
 backend.tf
 *.retry
+jdauphant.nginx
